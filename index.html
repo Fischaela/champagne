@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="glass" src="./assets/Glass_of_Champagne_01.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity id="rig" position="0 2 2">
+        <a-camera id="camera"></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+  <div class="form">
+    <label class="form__label" for="glasses">Number of Glasses</label>
+    <select id="glasses" class="form__select" name="glasses">
+      <option value="2">2x2</option> 
+      <option value="3" selected>3x3</option>
+      <option value="4">4x4</option>
+      <option value="5">5x5</option>
+      <!-- <option value="6">6x6</option>
+      <option value="7">7x7</option>
+      <option value="8">8x8</option>
+      <option value="9">9x9</option>
+      <option value="10">10x10</option> -->
+    </select>
+    <p>You'll need <span id="result">14</span> glasses.</p>
+  </div>
+</html>
