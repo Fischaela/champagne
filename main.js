@@ -127,5 +127,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   }
 
-  deployGlassPyramid(numberOfGlasses);
+  document.querySelector('a-scene').addEventListener('loaded', () => {
+    deployGlassPyramid(numberOfGlasses);
+  })
 })
