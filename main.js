@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const select = document.querySelector('#glasses');
   let numberOfGlasses = DEFAULT_NUMBER_OF_GLASSES;
 
-  // Add event listeners
-  select.addEventListener('change', (event) => {
-    numberOfGlasses = event.target.value;
-    deployGlassPyramid(numberOfGlasses)
-  });
-
   deployGlassPyramid = (glasses) => {
     let result = glasses * glasses;
     let count = glasses;
@@ -124,10 +118,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     sceneElement.appendChild(containerEntity)
-
   }
 
   document.querySelector('a-scene').addEventListener('loaded', () => {
+
+    // Add event listeners
+    select.addEventListener('change', (event) => {
+      numberOfGlasses = event.target.value;
+      deployGlassPyramid(numberOfGlasses)
+    });
+    
     deployGlassPyramid(numberOfGlasses);
   })
 })
