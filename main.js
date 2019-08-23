@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Render base level
     createLevel(result, count, 0);
     // Set camery position
-    document.querySelector('#rig').setAttribute('position', '0 ' + count + ' ' + count)
+    // document.querySelector('#rig').setAttribute('position', '0 ' + count + ' ' + count)
 
     for (let i = 0, iMax = glasses; i < iMax; i += 1) {
       count = count - 1;
