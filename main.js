@@ -121,13 +121,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   document.querySelector('a-scene').addEventListener('loaded', () => {
-
     // Add event listeners
     select.addEventListener('change', (event) => {
       numberOfGlasses = event.target.value;
       deployGlassPyramid(numberOfGlasses)
     });
-    
+
     deployGlassPyramid(numberOfGlasses);
   })
 })
